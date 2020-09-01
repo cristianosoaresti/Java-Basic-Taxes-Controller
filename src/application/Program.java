@@ -45,18 +45,18 @@ public class Program {
 		System.out.println();
 		System.out.println("TAXES PAID");
 
+		for (Person p : person) {
+			System.out.println(p.getName()+ String.format(": $ %.2f", p.incomeTax()));
+		}
+
 		Double totalTaxes = 0.0d;
-		
 		for (Person p : person) {
 			totalTaxes += p.incomeTax();
-			System.out.println(p.getName()+ String.format(": $ %.2f", p.incomeTax()));
 		}
 		
 		System.out.println();
 		System.out.println("TOTAL TAXES: $ " + String.format("%.2f" , totalTaxes));
 
 		sc.close();
-
 	}
-
 }
